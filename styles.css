@@ -1,0 +1,288 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background-color: ghostwhite;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	padding: 20px 10px;
+	background-color: ghostwhite;
+	max-height: 12vh;
+	overflow: hidden;
+}
+
+header > a {
+	padding: 0px 12px 12px 12px;
+	border-radius: 8px;
+	float: left;
+}
+
+header img {
+	width: 64px;
+	height: auto;
+}
+
+nav {
+	float: right;
+	white-space: nowrap;
+	font-size: 100%;
+	font-weight: 600;
+}
+
+nav li {
+	display: inline-block;
+	margin-top: 2vh;
+}
+
+nav li a {
+	text-decoration: none;
+	color: #000;
+	border-radius: 8px;
+	padding: 24px;
+}
+
+nav li a:hover {
+	background-color: lightgray;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 5vh;
+}
+
+h1 {
+	text-shadow: 1px 1px 1px #f76c82;
+	margin: 80px 0 20px 0;
+}
+
+h2 {
+	text-shadow: 1px 1px 1px #f76c82;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#email {
+	padding: 0 20px;
+	height: 30px;
+	width: 300px;
+	border: 1px black solid;
+	margin: 20px 0 10px 0;
+}
+
+.btn {
+	padding: 0 20px;
+	height: 40px;
+	width: 150px;
+	font-size: 100%;
+	font-weight: 800;
+	text-transform: uppercase;
+	border: 1px black solid;
+	background: #f76c82;
+	cursor: pointer;
+	margin: 0 0 20px 0;
+}
+
+#vantagens > ul > li {
+	padding: 20px 20px;
+	display: flex;
+	align-items: center;
+	justify-content: left;
+}
+
+#vantagens > ul > li > img {
+	height: 64px;
+	margin: 20px;
+}
+
+.vantagem {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+#nossos-produtos {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+main iframe {
+	margin: 20px 0 20px 0;
+}
+
+#lista-produtos {
+	display: flex;
+	flex-direction: row;
+	align-items: start;
+	margin-top: 5vh;
+}
+
+.produto {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+}
+
+.produto > img {
+	max-width: 192px;
+	border: 1px solid black;
+	cursor: pointer;
+}
+
+.produto > p {
+	max-width: 192px;
+	text-align: left;
+	font-size: 75%;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: black;
+	padding: 10px;
+	box-shadow: 0 0 1px 0 gray;
+	height: 70px;
+	background-color: lightgray;
+}
+
+#perguntas-frequentes {
+	width: 700px;
+	justify-self: left;
+	padding: 20px;
+	margin: 20px 0 20px 0;
+}
+
+#perguntas-frequentes > ul > li > p {
+	padding: 5px;
+}
+
+footer {
+	display: block;
+	position: relative;
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	background-color: lightslategray;
+	font-weight: lighter;
+	text-align: center;
+}
+
+footer li {
+	display: inline-block;
+	padding-bottom: 1vh;
+	padding-right: 2vw;
+	padding-left: 2vw;
+	font-weight: 400;
+}
+
+footer a {
+	text-decoration: none;
+	color: #000;
+	border-radius: 8px;
+	padding: 4px;
+}
+
+footer a:hover {
+	background-color: slategray;
+}
+
+@media screen and (max-width: 550px) {
+	header {
+		max-height: 100vh;
+	}
+
+	header a {
+		float: none;
+		display: block;
+		text-align: left;
+	}
+
+	nav {
+		float: none;
+	}
+
+	nav li {
+		display: block;
+		text-align: center;
+	}
+
+	main {
+		margin-top: 45vh;
+	}
+
+	h1 {
+		font-size: 150%;
+		text-align: center;
+	}
+
+	main iframe {
+		width: 256px;
+		height: 144px;
+	}
+
+	#lista-produtos {
+		flex-direction: column;
+	}
+
+	#perguntas-frequentes {
+		width: 400px;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: #121212;
+		color: #f56b81;
+	}
+
+	header {
+		background-color: #121212;
+	}
+
+	nav li a {
+		color: #f56b81;
+	}
+
+	#email {
+		background-color: #1f1f1f;
+		color: white;
+	}
+
+	#vantagens > ul > li > img {
+		filter: invert(100%);
+	}
+
+	.produto > p {
+		background-color: rgb(221, 112, 112);
+	}
+
+	footer {
+		background-color: #1c1c1c;
+	}
+
+	footer li a {
+		color: #f56b81;
+	}
+}
